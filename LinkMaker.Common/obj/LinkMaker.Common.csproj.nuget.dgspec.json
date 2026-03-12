@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Greenwich\\AMD201\\Coursework\\Hiện tại\\LinkMaker.Common\\LinkMaker.Common.csproj": {}
+    "E:\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj": {}
   },
   "projects": {
-    "E:\\Greenwich\\AMD201\\Coursework\\Hiện tại\\LinkMaker.Common\\LinkMaker.Common.csproj": {
+    "E:\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Greenwich\\AMD201\\Coursework\\Hiện tại\\LinkMaker.Common\\LinkMaker.Common.csproj",
+        "projectUniqueName": "E:\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj",
         "projectName": "LinkMaker.Common",
-        "projectPath": "E:\\Greenwich\\AMD201\\Coursework\\Hiện tại\\LinkMaker.Common\\LinkMaker.Common.csproj",
-        "packagesPath": "C:\\Users\\ROG STRIX\\.nuget\\packages\\",
-        "outputPath": "E:\\Greenwich\\AMD201\\Coursework\\Hiện tại\\LinkMaker.Common\\obj\\",
+        "projectPath": "E:\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "E:\\LinkMaker\\LinkMaker.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ROG STRIX\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

@@ -19,8 +19,8 @@ namespace LinkMaker.Data.Entities
         public string? Phone { get; set; }
         public string? Email { get; set; }
         public string? Address { get; set; }
-        public virtual Url Url { get; set; } = null!;    
-        public virtual Url NewLink { get; set; } = null!;
+        public virtual Url? Url { get; set; } = null!;    
+        public virtual Url? NewLink { get; set; } = null!;
         public Guid? UrlId { get; set; }
         //public virtual Major Major { get; set; } = null!;
 

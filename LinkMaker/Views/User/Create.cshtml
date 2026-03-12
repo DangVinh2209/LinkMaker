@@ -6,7 +6,7 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
     bool isCreate = Model == null || Model.Id == Guid.Empty;
-    string actionString = isCreate ? "Create" : "Edit";
+   
 
 }
 
@@ -16,7 +16,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="@actionString" enctype="multipart/form-data" >
+        <form asp-action="Create" enctype="multipart/form-data" >
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             @if (!isCreate)
             {
@@ -37,14 +37,10 @@
             </div>
             <div class="form-group">
                 <label asp-for="DateOfBirth" class="control-label"></label>
-                <input asp-for="DateOfBirth" class="form-control" />
+                <input asp-for="DateOfBirth" class="form-control" type="date"/>
                 <span asp-validation-for="DateOfBirth" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Avatar" class="control-label"></label>
-                <input asp-for="Avatar" class="form-control" />
-                <span asp-validation-for="Avatar" class="text-danger"></span>
-            </div>
+            
             <div class="form-group">
                 <label asp-for="Phone" class="control-label"></label>
                 <input asp-for="Phone" class="form-control" />
@@ -60,10 +56,7 @@
                 <input asp-for="Address" class="form-control" />
                 <span asp-validation-for="Address" class="text-danger"></span>
             </div>
-            @* <div class="form-group">
-                <label asp-for="UrlId" class="control-label"></label>
-                <select asp-for="UrlId" class ="form-control" asp-items="ViewBag.UrlId"></select>
-            </div> *@
+             
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

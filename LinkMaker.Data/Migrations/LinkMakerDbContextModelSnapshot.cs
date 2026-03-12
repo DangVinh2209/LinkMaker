@@ -72,7 +72,7 @@ namespace LinkMaker.Data.Migrations
                         .HasMaxLength(75)
                         .HasColumnType("nvarchar(75)");
 
-                    b.Property<Guid>("NewLinkId")
+                    b.Property<Guid?>("NewLinkId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Phone")
@@ -95,9 +95,7 @@ namespace LinkMaker.Data.Migrations
                 {
                     b.HasOne("LinkMaker.Data.Entities.Url", "NewLink")
                         .WithMany()
-                        .HasForeignKey("NewLinkId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("NewLinkId");
 
                     b.HasOne("LinkMaker.Data.Entities.Url", "Url")
                         .WithMany("Users")

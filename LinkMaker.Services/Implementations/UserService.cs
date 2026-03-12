@@ -72,6 +72,12 @@ namespace LinkMaker.Services.Implementations
             }
             catch (Exception ex)
             {
+                // Add this to see the actual error message
+                System.Diagnostics.Debug.WriteLine("DATABASE ERROR: " + ex.Message);
+                if (ex.InnerException != null)
+                {
+                    System.Diagnostics.Debug.WriteLine("INNER ERROR: " + ex.InnerException.Message);
+                }
 
             }
             return isOK;
@@ -160,6 +166,11 @@ namespace LinkMaker.Services.Implementations
             {
             }
             return null;
+        }
+
+        public Task<UserDTO?> GetByIdWithLink(Guid idStudent)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<UserDTO?> GetByIdWithMajor(Guid idUser)
