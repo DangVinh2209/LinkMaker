@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="../LinkMaker.API/LinkMaker.API.csproj" Id="455f8807-cd6e-426b-a169-ae38a0421dbe" />
+  <Project Path="../LinkMaker.Common/LinkMaker.Common.csproj" Id="cf611d2c-2044-47b7-96e0-50c73c6d1cc8" />
+  <Project Path="../LinkMaker.Data/LinkMaker.Data.csproj" Id="5cb9b399-bc00-49d1-8bf7-fa31401f84bf" />
+  <Project Path="../LinkMaker.Services/LinkMaker.Services.csproj" Id="a632768b-6deb-4784-9998-1d1a3fe2542d" />
+  <Project Path="LinkMaker.csproj" />
+</Solution>

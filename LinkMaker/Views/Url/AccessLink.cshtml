@@ -1,0 +1,19 @@
+﻿@model IEnumerable<LinkMaker.Data.Entities.Url>
+
+@{
+    ViewData["Title"] = "AccessLink";
+}
+
+<h1>AccessLink</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+@foreach (var item in Model)
+{
+    <a asp-action="Go" asp-route-code="@item.NewLink">
+        @item.NewLink
+    </a>
+    <br />
+}

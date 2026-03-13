@@ -1,0 +1,32 @@
+E:\visual studioi\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Data.deps.json
+E:\visual studioi\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Data.dll
+E:\visual studioi\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Data.pdb
+E:\visual studioi\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Common.dll
+E:\visual studioi\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Common.pdb
+E:\visual studioi\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.csproj.AssemblyReference.cache
+E:\visual studioi\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\visual studioi\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.AssemblyInfoInputs.cache
+E:\visual studioi\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.AssemblyInfo.cs
+E:\visual studioi\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.csproj.CoreCompileInputs.cache
+E:\visual studioi\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.sourcelink.json
+E:\visual studioi\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMake.CF299A74.Up2Date
+E:\visual studioi\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.dll
+E:\visual studioi\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\refint\LinkMaker.Data.dll
+E:\visual studioi\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.pdb
+E:\visual studioi\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\ref\LinkMaker.Data.dll
+E:\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Data.deps.json
+E:\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Data.dll
+E:\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Data.pdb
+E:\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Common.dll
+E:\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Common.pdb
+E:\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.csproj.AssemblyReference.cache
+E:\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.AssemblyInfoInputs.cache
+E:\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.AssemblyInfo.cs
+E:\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.csproj.CoreCompileInputs.cache
+E:\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.sourcelink.json
+E:\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMake.CF299A74.Up2Date
+E:\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.dll
+E:\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\refint\LinkMaker.Data.dll
+E:\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.pdb
+E:\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\ref\LinkMaker.Data.dll
