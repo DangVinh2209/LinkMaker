@@ -1,0 +1,396 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\MigrationsIdentity\\20260316103745_AddDescriptionToIdentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CB9B399-BC00-49D1-8BF7-FA31401F84BF}|..\\LinkMaker.Data\\LinkMaker.Data.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker.data\\linkmakeridentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CB9B399-BC00-49D1-8BF7-FA31401F84BF}|..\\LinkMaker.Data\\LinkMaker.Data.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker.data\\entities\\identity\\usermanagerrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CB9B399-BC00-49D1-8BF7-FA31401F84BF}|..\\LinkMaker.Data\\LinkMaker.Data.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker.data\\entities\\identity\\linkmakeruser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\areas\\identity\\pages\\account\\manage\\email.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\email.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\areas\\identity\\pages\\account\\externallogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:areas\\identity\\pages\\account\\externallogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\areas\\identity\\pages\\account\\manage\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\areas\\identity\\pages\\account\\confirmemailchange.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:areas\\identity\\pages\\account\\confirmemailchange.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\areas\\identity\\pages\\account\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:areas\\identity\\pages\\account\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\areas\\identity\\pages\\account\\accessdenied.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:areas\\identity\\pages\\account\\accessdenied.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\areas\\identity\\pages\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:areas\\identity\\pages\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker\\views\\authentication\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25276061-0C68-766C-A6ED-B2D173A5BCCF}|LinkMaker.csproj|solutionrelative:views\\authentication\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A632768B-6DEB-4784-9998-1D1A3FE2542D}|..\\LinkMaker.Services\\LinkMaker.Services.csproj|e:\\greenwich\\amd201\\coursework\\update\\linkmaker.services\\implementations\\urlservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 229,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T10:44:48.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Logout.cshtml.cs",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T10:42:46.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260316103745_AddDescriptionToIdentity.cs",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\MigrationsIdentity\\20260316103745_AddDescriptionToIdentity.cs",
+              "RelativeDocumentMoniker": "..\\LinkMaker.Data\\MigrationsIdentity\\20260316103745_AddDescriptionToIdentity.cs",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\MigrationsIdentity\\20260316103745_AddDescriptionToIdentity.cs",
+              "RelativeToolTip": "..\\LinkMaker.Data\\MigrationsIdentity\\20260316103745_AddDescriptionToIdentity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T10:37:45.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LinkMakerIdentityDbContext.cs",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\LinkMakerIdentityDbContext.cs",
+              "RelativeDocumentMoniker": "..\\LinkMaker.Data\\LinkMakerIdentityDbContext.cs",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\LinkMakerIdentityDbContext.cs",
+              "RelativeToolTip": "..\\LinkMaker.Data\\LinkMakerIdentityDbContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T10:37:07.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserManagerRole.cs",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\Entities\\Identity\\UserManagerRole.cs",
+              "RelativeDocumentMoniker": "..\\LinkMaker.Data\\Entities\\Identity\\UserManagerRole.cs",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\Entities\\Identity\\UserManagerRole.cs",
+              "RelativeToolTip": "..\\LinkMaker.Data\\Entities\\Identity\\UserManagerRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T10:36:52.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LinkMakerUser.cs",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\Entities\\Identity\\LinkMakerUser.cs",
+              "RelativeDocumentMoniker": "..\\LinkMaker.Data\\Entities\\Identity\\LinkMakerUser.cs",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\Entities\\Identity\\LinkMakerUser.cs",
+              "RelativeToolTip": "..\\LinkMaker.Data\\Entities\\Identity\\LinkMakerUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T10:36:46.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAcwLAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T08:32:01.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Email.cshtml.cs",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwBsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T10:11:53.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAvwJUAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T10:04:27.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T10:04:20.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthenticationController.cs",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "Controllers\\AuthenticationController.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAqwKAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T09:35:40.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T09:34:04.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T09:25:00.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T09:23:37.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ExternalLogin.cshtml.cs",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAADgvyUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T09:17:34.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-16T09:21:54.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ConfirmEmailChange.cshtml",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ConfirmEmailChange.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T09:17:04.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ConfirmEmail.cshtml",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T09:16:36.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AccessDenied.cshtml.cs",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T09:15:58.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T09:15:31.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Views\\Authentication\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Authentication\\Login.cshtml",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker\\Views\\Authentication\\Login.cshtml",
+              "RelativeToolTip": "Views\\Authentication\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-16T09:05:40.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UrlService.cs",
+              "DocumentMoniker": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Services\\Implementations\\UrlService.cs",
+              "RelativeDocumentMoniker": "..\\LinkMaker.Services\\Implementations\\UrlService.cs",
+              "ToolTip": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Services\\Implementations\\UrlService.cs",
+              "RelativeToolTip": "..\\LinkMaker.Services\\Implementations\\UrlService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T08:19:10.303Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

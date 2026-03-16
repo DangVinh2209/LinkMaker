@@ -22,3 +22,15 @@ E:\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.dll
 E:\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\refint\LinkMaker.Common.dll
 E:\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.pdb
 E:\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\ref\LinkMaker.Common.dll
+E:\Greenwich\AMD201\Coursework\update\LinkMaker.Common\bin\Debug\net10.0\LinkMaker.Common.deps.json
+E:\Greenwich\AMD201\Coursework\update\LinkMaker.Common\bin\Debug\net10.0\LinkMaker.Common.dll
+E:\Greenwich\AMD201\Coursework\update\LinkMaker.Common\bin\Debug\net10.0\LinkMaker.Common.pdb
+E:\Greenwich\AMD201\Coursework\update\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.GeneratedMSBuildEditorConfig.editorconfig
+E:\Greenwich\AMD201\Coursework\update\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.AssemblyInfoInputs.cache
+E:\Greenwich\AMD201\Coursework\update\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.AssemblyInfo.cs
+E:\Greenwich\AMD201\Coursework\update\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.csproj.CoreCompileInputs.cache
+E:\Greenwich\AMD201\Coursework\update\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.sourcelink.json
+E:\Greenwich\AMD201\Coursework\update\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.dll
+E:\Greenwich\AMD201\Coursework\update\LinkMaker.Common\obj\Debug\net10.0\refint\LinkMaker.Common.dll
+E:\Greenwich\AMD201\Coursework\update\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.pdb
+E:\Greenwich\AMD201\Coursework\update\LinkMaker.Common\obj\Debug\net10.0\ref\LinkMaker.Common.dll

@@ -14,7 +14,7 @@ namespace LinkMaker.Controllers
         private readonly LinkMakerDbContext _context;
 
         public UserController(LinkMakerDbContext context, IUserService userService)
-        {
+        {   
             _userService = userService;
             _context = context;
         }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\LinkMaker\\LinkMaker.Services\\LinkMaker.Services.csproj": {}
+    "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Services\\LinkMaker.Services.csproj": {}
   },
   "projects": {
-    "E:\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj": {
+    "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Common\\LinkMaker.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj",
+        "projectUniqueName": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Common\\LinkMaker.Common.csproj",
         "projectName": "LinkMaker.Common",
-        "projectPath": "E:\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\LinkMaker\\LinkMaker.Common\\obj\\",
+        "projectPath": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Common\\LinkMaker.Common.csproj",
+        "packagesPath": "C:\\Users\\ROG STRIX\\.nuget\\packages\\",
+        "outputPath": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ROG STRIX\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -343,20 +343,20 @@
         }
       }
     },
-    "E:\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj": {
+    "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\LinkMaker.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj",
+        "projectUniqueName": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\LinkMaker.Data.csproj",
         "projectName": "LinkMaker.Data",
-        "projectPath": "E:\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\LinkMaker\\LinkMaker.Data\\obj\\",
+        "projectPath": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\LinkMaker.Data.csproj",
+        "packagesPath": "C:\\Users\\ROG STRIX\\.nuget\\packages\\",
+        "outputPath": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ROG STRIX\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -371,8 +371,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "E:\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj": {
-                "projectPath": "E:\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj"
+              "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Common\\LinkMaker.Common.csproj": {
+                "projectPath": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Common\\LinkMaker.Common.csproj"
               }
             }
           }
@@ -422,7 +422,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -700,20 +700,20 @@
         }
       }
     },
-    "E:\\LinkMaker\\LinkMaker.Services\\LinkMaker.Services.csproj": {
+    "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Services\\LinkMaker.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\LinkMaker\\LinkMaker.Services\\LinkMaker.Services.csproj",
+        "projectUniqueName": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Services\\LinkMaker.Services.csproj",
         "projectName": "LinkMaker.Services",
-        "projectPath": "E:\\LinkMaker\\LinkMaker.Services\\LinkMaker.Services.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\LinkMaker\\LinkMaker.Services\\obj\\",
+        "projectPath": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Services\\LinkMaker.Services.csproj",
+        "packagesPath": "C:\\Users\\ROG STRIX\\.nuget\\packages\\",
+        "outputPath": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ROG STRIX\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -728,11 +728,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "E:\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj": {
-                "projectPath": "E:\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj"
+              "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Common\\LinkMaker.Common.csproj": {
+                "projectPath": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Common\\LinkMaker.Common.csproj"
               },
-              "E:\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj": {
-                "projectPath": "E:\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj"
+              "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\LinkMaker.Data.csproj": {
+                "projectPath": "E:\\Greenwich\\AMD201\\Coursework\\update\\LinkMaker.Data\\LinkMaker.Data.csproj"
               }
             }
           }
@@ -768,7 +768,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
