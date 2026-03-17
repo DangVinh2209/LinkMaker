@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LinkMaker.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fe12a4700cfb23830b8df9bcd1fde923d9f7047")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+372d168519c5ecf107879214f095282717cffa1c")]
 [assembly: System.Reflection.AssemblyProductAttribute("LinkMaker.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LinkMaker.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
