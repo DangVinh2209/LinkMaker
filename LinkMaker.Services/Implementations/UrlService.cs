@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using LinkMaker.Common.DTOs;
 using LinkMaker.Common.DTOS;
@@ -29,6 +30,8 @@ namespace LinkMaker.Services.Implementations
                     YourLink = dtoUrl.YourLink.Trim(),
                     //Description = dtoUrl.Description?.Trim(),
                     UrlCode = dtoUrl.UrlCode?.Trim(),
+                    UserId = dtoUrl.UserId,
+                    NewLink = dtoUrl.NewLink?.Trim() ?? string.Empty
                 };
                 await _context.Urls.AddAsync(newUrl);
                 await _context.SaveChangesAsync();
@@ -41,26 +44,27 @@ namespace LinkMaker.Services.Implementations
             }
             return isOK;
         }
-        public async Task<bool> Delete(Guid idMajor)
+        public async Task<bool> Delete(Guid idUrl)
         {
-            var isOK = false;
             try
             {
-                var url = await _context.Urls.FindAsync(idMajor);
-                if (url != null)
+                var url = await _context.Urls.FindAsync(idUrl);
+                if (url == null)
                 {
-                    _context.Urls.Remove(url);
+                    return false; // Item already gone or not found
                 }
 
+                _context.Urls.Remove(url);
                 await _context.SaveChangesAsync();
-                isOK = true;
+                return true;
             }
             catch (Exception ex)
             {
-
-                throw;
+                // This will help you see the REAL error in the Output window
+                //System.Diagnostics.Debug.WriteLine(ex.Message);
+                //return false;
+                throw; // Rethrow the exception to be handled by the caller
             }
-            return isOK;
         }
         public async Task<UrlDTO[]?> GetAll()
         {
@@ -73,15 +77,18 @@ namespace LinkMaker.Services.Implementations
                             YourLink = x.YourLink,
                             NewLink = x.NewLink,
                             UrlCode = x.UrlCode,
+                            UserId = x.UserId,
                         })
                         .ToArrayAsync();
-                return majors;
-            }
-            catch (Exception)
-            {
 
+                // Ensure we return an empty array instead of null if the query result is empty
+                return majors ?? Array.Empty<UrlDTO>();
             }
-            return null;
+            catch (Exception ex)
+            {
+                // Log your error here
+                return Array.Empty<UrlDTO>(); // Return empty on failure
+            }
         }
         public async Task<UrlDTO?> GetById(Guid idUrl)
         {
@@ -95,6 +102,7 @@ namespace LinkMaker.Services.Implementations
                     YourLink = m.YourLink,
                     NewLink = m.NewLink,
                     UrlCode = m.UrlCode,
+                    UserId = m.UserId,
                 })
                 .SingleOrDefaultAsync();
                 return majorDTO;

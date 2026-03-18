@@ -1,5 +1,6 @@
 ﻿@* @model IEnumerable<LinkMaker.Models.Link> *@
-@model IEnumerable<LinkMaker.Data.Entities.Url>
+@* @model IEnumerable<LinkMaker.Data.Entities.Url> *@
+@model IEnumerable<LinkMaker.Common.DTOS.UrlDTO>
 
 @{
     ViewData["Title"] = "List";
@@ -24,6 +25,8 @@
     </thead>
     <tbody>
 @* the foreach loop can not work with null so in the LinkController.cs in the Index method should pass model View(model) *@
+@if (Model != null && Model.Any())
+{
 @foreach (var item in Model) {
         <tr>
             <td>
@@ -39,5 +42,12 @@
             </td>
         </tr>
 }
+        }
+        else
+        {
+            <tr>
+                <td colspan="3" class="text-center">No data found.</td>
+            </tr>
+        }
     </tbody>
 </table>

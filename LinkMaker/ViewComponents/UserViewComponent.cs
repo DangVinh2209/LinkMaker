@@ -18,7 +18,7 @@ namespace StudentManager.MVC.ViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var users = await _context.Users
-                .Include(s => s.Url)
+                .Include(s => s.Urls)
                 .Select(s => new UserDTO
                 {
                     Id = s.Id,
@@ -28,8 +28,7 @@ namespace StudentManager.MVC.ViewComponents
                     Address = s.Address,
                     DateOfBirth = s.DateOfBirth,
                     //Gender = s.Gender,
-                   UrlId = s.UrlId,
-                    Url = s.Url.YourLink,
+                    //Url = s.Urls.YourLink,
                 })
                 .ToListAsync();
             return View(users); // Trả về View Default.cshtml

@@ -22,7 +22,7 @@ namespace LinkMaker.Controllers
         // GET: UserController1
         public async Task<IActionResult> Index()
         {
-            var linkMakerDbContext = _context.Users.Include(u => u.Url);
+            var linkMakerDbContext = _context.Users.Include(u => u.Urls);
             return View(await linkMakerDbContext.ToListAsync());
         }
 
@@ -35,7 +35,7 @@ namespace LinkMaker.Controllers
             }
 
             var user = await _context.Users
-                .Include(u => u.Url)
+                .Include(u => u.Urls)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {
@@ -101,28 +101,28 @@ namespace LinkMaker.Controllers
         }
 
         // GET: UserController1/Edit/5
-        public async Task<IActionResult> Edit(Guid? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        //public async Task<IActionResult> Edit(Guid? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var user = await _context.Users.FindAsync(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-            ViewData["UrlId"] = new SelectList(_context.Urls, "Id", "NewLink", user.UrlId);
-            return View(user);
-        }
+        //    var user = await _context.Users.FindAsync(id);
+        //    if (user == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    ViewData["UrlId"] = new SelectList(_context.Urls, "Id", "NewLink", user.UrlId);
+        //    return View(user);
+        //}
 
         // POST: UserController1/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,FullName,DateOfBirth,Avatar,Phone,Email,Address,UrlId")] User user)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,FullName,DateOfBirth,Avatar,Phone,Email,Address")] User user)
         {
             if (id != user.Id)
             {
@@ -149,7 +149,7 @@ namespace LinkMaker.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UrlId"] = new SelectList(_context.Urls, "Id", "NewLink", user.UrlId);
+            
             return View(user);
         }
 
@@ -162,7 +162,7 @@ namespace LinkMaker.Controllers
             }
 
             var user = await _context.Users
-                .Include(u => u.Url)
+                .Include(u => u.Urls)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {

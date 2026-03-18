@@ -12,6 +12,6 @@ namespace LinkMaker.Common.DTOS
         public string YourLink { get; set; } = string.Empty;
         public string NewLink { get; set; } = string.Empty;
         public string? UrlCode { get; set; }
-
+        public Guid UserId { get; set; }
     }
 }

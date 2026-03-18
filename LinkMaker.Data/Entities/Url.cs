@@ -11,6 +11,8 @@ namespace LinkMaker.Data.Entities
         public string YourLink { get; set; } = string.Empty;
         public string NewLink { get; set; } = string.Empty;
         public string? UrlCode { get; set; }
-        public ICollection<User> Users { get; set; } = new Collection<User>();
+        
+        public Guid UserId { get; set; } // The Foreign Key
+        public virtual User User { get; set; } // The Navigation Property
     }
 }

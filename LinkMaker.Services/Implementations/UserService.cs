@@ -62,7 +62,7 @@ namespace LinkMaker.Services.Implementations
                     Address = dtoUser.Address?.Trim(),
                     Email = dtoUser.Email?.Trim(),
                     Phone = dtoUser.Phone?.Trim(),
-                    UrlId = dtoUser.UrlId
+                    
                 };
 
                 await _context.Users.AddAsync(newUser);
@@ -91,7 +91,7 @@ namespace LinkMaker.Services.Implementations
                     user.Phone = studentDTO.Phone?.Trim();
                     user.Email = studentDTO.Email?.Trim();
                     user.DateOfBirth = studentDTO.DateOfBirth;
-                    user.UrlId = studentDTO.UrlId;
+                   
 
                     await _context.SaveChangesAsync();
 
@@ -140,7 +140,7 @@ namespace LinkMaker.Services.Implementations
                 }
 
                 var users = await _context.Users
-                    .Include(s => s.Url)
+                    .Include(s => s.Urls)
                     .Select(s => new UserDTO
                     {
                         Id = s.Id,
@@ -149,8 +149,7 @@ namespace LinkMaker.Services.Implementations
                         Email = s.Email,
                         FullName = s.FullName,
                         Phone = s.Phone,
-                        UrlId = s.UrlId,
-                        Url = s.Url.YourLink,
+                        //Url = s.Urls.YourLink,
                     })
                     .ToArrayAsync();
 
@@ -189,7 +188,6 @@ namespace LinkMaker.Services.Implementations
                         Email = s.Email,
                         FullName = s.FullName,
                         Phone = s.Phone,
-                        UrlId = s.UrlId,
                     })
                     .SingleOrDefaultAsync();
 
@@ -214,7 +212,7 @@ namespace LinkMaker.Services.Implementations
             {
                 return await _context.Users
                     .Where(s => s.Id == idUser)
-                    .Include(s => s.Url)
+                    .Include(s => s.Urls)
                     .Select(s => new UserDTO
                     {
                         Id = s.Id,
@@ -223,8 +221,7 @@ namespace LinkMaker.Services.Implementations
                         Email = s.Email,
                         FullName = s.FullName,
                         Phone = s.Phone,
-                        UrlId = s.UrlId,
-                        Url = s.Url.YourLink,
+                        //Url = s.Url.YourLink,
                     })
                     .SingleOrDefaultAsync();
             }

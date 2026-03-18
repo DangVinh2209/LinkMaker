@@ -6,6 +6,7 @@ using LinkMaker.MVC.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace LinkMaker.Controllers
@@ -13,11 +14,11 @@ namespace LinkMaker.Controllers
     [Authorize]
     public class UrlController : Controller
     {
-        //private readonly LinkMakerDbContext _context;
+        private readonly LinkMakerDbContext _context;
         private readonly IUrlService _serviceUrl;
-        public UrlController(IUrlService serviceUrl)
+        public UrlController(IUrlService serviceUrl, LinkMakerDbContext context)
         {
-            //_context = context;
+            _context = context;
             _serviceUrl = serviceUrl;
         }
         // GET: UrlController/Index
@@ -51,18 +52,28 @@ namespace LinkMaker.Controllers
         // POST: HomeController1/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,YourLink,NewLink,MajorCode")] UrlDTO urlDTO)
-        //public async Task<IActionResult> Create([Bind("Id,Name,Description,MajorCode")] MajorDTO majorDTO)
+        public async Task<IActionResult> Create([Bind("Id,YourLink,NewLink")] UrlDTO urlDTO)
         {
+            // 1. Grab the ID of the currently logged-in user
+            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (userIdString != null)
+            {
+                // 2. Attach the User ID to the link so the database knows who owns it
+                urlDTO.UserId = Guid.Parse(userIdString);
+            }
+
             if (ModelState.IsValid)
             {
+                // 3. Now when the service tries to create it, the database is happy!
                 var isOK = await _serviceUrl.Create(urlDTO);
                 if (isOK)
                 {
                     return RedirectToAction(nameof(Create));
                 }
             }
-            //return View();
+
+            // If we get here, something failed. Return the view with the data they entered.
             return View(urlDTO);
         }
         public async Task<IActionResult> Edit(Guid id)
@@ -117,13 +128,13 @@ namespace LinkMaker.Controllers
         }
 
         // GET: HomeController1/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
+        //public ActionResult Delete(int id)
+        //{
+        //    return View();
+        //}
 
         // GET: Majors/Delete/5
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -144,7 +155,7 @@ namespace LinkMaker.Controllers
         // POST: Majors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
             bool isOK = false;
@@ -160,15 +171,17 @@ namespace LinkMaker.Controllers
                 if (isOK)
                 {
                     message = "Xoa thanh cong";
+                    return RedirectToAction(nameof(Index));
                 }
             }
             catch (Exception ex)
             {
-                message = "Loi thuc thi " + ex.Message;
-                //throw;
+                //message = "Loi thuc thi " + ex.Message;
+                //return RedirectToAction(nameof(Index));
+                throw;
             }
 
-            return Json(new { isOK, message });
+            //return Json(new { isOK, message });
 
             return RedirectToAction(nameof(Index));
         }

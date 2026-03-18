@@ -17,7 +17,7 @@ namespace LinkMaker.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "10.0.2")
+                .HasAnnotation("ProductVersion", "10.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -36,12 +36,17 @@ namespace LinkMaker.Data.Migrations
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("YourLink")
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Urls");
                 });
@@ -53,12 +58,10 @@ namespace LinkMaker.Data.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Address")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Avatar")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
@@ -72,43 +75,28 @@ namespace LinkMaker.Data.Migrations
                         .HasMaxLength(75)
                         .HasColumnType("nvarchar(75)");
 
-                    b.Property<Guid?>("NewLinkId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Phone")
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
-
-                    b.Property<Guid?>("UrlId")
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("NewLinkId");
-
-                    b.HasIndex("UrlId");
 
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("LinkMaker.Data.Entities.User", b =>
-                {
-                    b.HasOne("LinkMaker.Data.Entities.Url", "NewLink")
-                        .WithMany()
-                        .HasForeignKey("NewLinkId");
-
-                    b.HasOne("LinkMaker.Data.Entities.Url", "Url")
-                        .WithMany("Users")
-                        .HasForeignKey("UrlId");
-
-                    b.Navigation("NewLink");
-
-                    b.Navigation("Url");
-                });
-
             modelBuilder.Entity("LinkMaker.Data.Entities.Url", b =>
                 {
-                    b.Navigation("Users");
+                    b.HasOne("LinkMaker.Data.Entities.User", "User")
+                        .WithMany("Urls")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("LinkMaker.Data.Entities.User", b =>
+                {
+                    b.Navigation("Urls");
                 });
 #pragma warning restore 612, 618
         }

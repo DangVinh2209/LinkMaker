@@ -16,14 +16,14 @@ namespace LinkMaker.Data.Configurations
                 .IsRequired()
                 .HasMaxLength(MaxLengths.FULL_NAME);
 
-            builder.Property(s => s.Avatar)
-                .HasMaxLength(MaxLengths.AVATAR);
-            builder.Property(s => s.Phone)
-                .HasMaxLength(MaxLengths.PHONE);
+            //builder.Property(s => s.Avatar)
+            //    .HasMaxLength(MaxLengths.AVATAR);
+            //builder.Property(s => s.Phone)
+            //    .HasMaxLength(MaxLengths.PHONE);
             builder.Property(s => s.Email)
                 .HasMaxLength(MaxLengths.EMAIL);
-            builder.Property(s => s.Address)
-                .HasMaxLength(MaxLengths.ADDRESS);
+            //builder.Property(s => s.Address)
+            //    .HasMaxLength(MaxLengths.ADDRESS);
         }
     }
 }

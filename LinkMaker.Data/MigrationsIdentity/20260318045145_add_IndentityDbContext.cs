@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace LinkMaker.Data.Migrations
+namespace LinkMaker.Data.MigrationsIdentity
 {
     /// <inheritdoc />
-    public partial class createLinkMakerDb : Migration
+    public partial class add_IndentityDbContext : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
