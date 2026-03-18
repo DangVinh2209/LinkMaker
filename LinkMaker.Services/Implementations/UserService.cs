@@ -4,25 +4,55 @@ using LinkMaker.Data.Entities;
 using LinkMaker.Data.Entities.Identity;
 using LinkMaker.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace LinkMaker.Services.Implementations
 {
     public class UserService : IUserService
     {
+        private readonly IDistributedCache _cache;
         private readonly LinkMakerDbContext _context;
-        public UserService(LinkMakerDbContext context)
+        private const string AllUsersCacheKey = "AllUsers_List";
+
+        public UserService(LinkMakerDbContext context, IDistributedCache cache)
         {
             _context = context;
+            _cache = cache;
         }
+
+        #region Cache Helpers
+        private async Task SetCacheAsync<T>(string key, T value)
+        {
+            var options = new DistributedCacheEntryOptions
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10),
+                SlidingExpiration = TimeSpan.FromMinutes(2)
+            };
+            var serializedData = JsonSerializer.Serialize(value);
+            await _cache.SetStringAsync(key, serializedData, options);
+        }
+
+        private async Task ClearUserCacheAsync(Guid? id = null)
+        {
+            // Always clear the list cache
+            await _cache.RemoveAsync(AllUsersCacheKey);
+
+            // If a specific ID is provided, clear that specific user's cache
+            if (id.HasValue)
+            {
+                await _cache.RemoveAsync($"User_{id.Value}");
+            }
+        }
+        #endregion
+
         public async Task<bool> Create(UserDTO dtoUser)
         {
-            //throw new NotImplementedException();
-            var isOK = false;
             try
             {
                 var newUser = new User
@@ -32,183 +62,25 @@ namespace LinkMaker.Services.Implementations
                     Address = dtoUser.Address?.Trim(),
                     Email = dtoUser.Email?.Trim(),
                     Phone = dtoUser.Phone?.Trim(),
-                    //Gender = (int)dtoStudent.Gender,
-                    //Gender = dtoUser.Gender,
-                    //Hobby = dtoUser.Hobby,
-                    UrlId = dtoUser.UrlId,
-                    //StudentClassId = dtoStudent.StudentClassId,
-                    Avatar = dtoUser.AvatarPath,
+                    UrlId = dtoUser.UrlId
                 };
+
                 await _context.Users.AddAsync(newUser);
-
-                //if (dtoStudent.Avatar != null && dtoStudent.Avatar.Length > 0)
-                //{
-                //    var file = dtoStudent.Avatar;
-                //    var extension = Path.GetExtension(file.FileName).ToLower();
-                //    var arrayAllowedFile = new string[] { ".jpg", ".jpeg", ".png" };
-                //    if (arrayAllowedFile.Contains(extension))
-                //    {
-                //        var allowedSize = 5 * 1024 * 1024;
-                //        if (file.Length < allowedSize)
-                //        {
-                //            var fileName = Guid.NewGuid().ToString() + extension;
-                //            var wwwRootFolder = _environment.WebRootPath;
-                //            var mediaFolder = Path.Combine(wwwRootFolder, "media", "images");
-                //            if (!Directory.Exists(mediaFolder))
-                //            {
-                //                Directory.CreateDirectory(mediaFolder);
-                //            }
-                //            var destinationFile = Path.Combine(mediaFolder, fileName);
-                //            using (var fileStream = new FileStream(destinationFile, FileMode.Create))
-                //            {
-                //                await file.CopyToAsync(fileStream);
-                //            }
-                //            newStudent.Avatar = fileName;
-                //        }
-                //    }
-                //}
                 await _context.SaveChangesAsync();
-                isOK = true;
+
+                // Invalidate the list because a new user exists
+                await ClearUserCacheAsync();
+                return true;
             }
             catch (Exception ex)
             {
-                // Add this to see the actual error message
                 System.Diagnostics.Debug.WriteLine("DATABASE ERROR: " + ex.Message);
-                if (ex.InnerException != null)
-                {
-                    System.Diagnostics.Debug.WriteLine("INNER ERROR: " + ex.InnerException.Message);
-                }
-
+                return false;
             }
-            return isOK;
-        }
-
-        public async Task<bool> Delete(Guid idUser)
-        {
-            var isOK = false;
-            try
-            {
-                var user = await _context.Users.FindAsync(idUser);
-                if (user != null)
-                {
-                    _context.Users.Remove(user);
-                }
-
-                await _context.SaveChangesAsync();
-                isOK = true;
-            }
-            catch (Exception ex)
-            {
-
-            }
-
-            return isOK;
-        }
-
-        public async Task<UserDTO[]?> GetAll()
-        {
-            //throw new NotImplementedException();
-            try
-            {
-                var user = await _context.Users
-                    .Include(s => s.Url)
-                    .Select(s => new UserDTO
-                    {
-                        Id = s.Id,
-                        Address = s.Address,
-                        //AvatarPath = s.Avatar,
-                        DateOfBirth = s.DateOfBirth,
-                        Email = s.Email,
-                        FullName = s.FullName,
-                        Phone = s.Phone,
-                        //Gender = s.Gender,
-                        //Hobby = s.Hobby,
-                        UrlId = s.UrlId,
-                        Url = s.Url.YourLink,
-                        //Url = s.Url.NewLink,
-                        //StudentClassId = s.StudentClassId,
-                    })
-                    .ToArrayAsync();
-                return user;
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return null;
-        }
-
-        public async Task<UserDTO?> GetById(Guid idUser)
-        {
-            //throw new NotImplementedException();
-            try
-            {
-                var user = await _context.Users
-                    .Where(s => s.Id == idUser)
-                    .Select(s => new UserDTO
-                    {
-                        Id = s.Id,
-                        Address = s.Address,
-                        //AvatarPath = s.Avatar,
-                        DateOfBirth = s.DateOfBirth,
-                        Email = s.Email,
-                        FullName = s.FullName,
-                        Phone = s.Phone,
-                        //Gender = s.Gender,
-                        //Hobby = s.Hobby,
-                        UrlId = s.UrlId,
-                        //StudentClassId = s.StudentClassId,
-                    })
-                    .SingleOrDefaultAsync();
-                return user;
-            }
-            catch (Exception ex)
-            {
-            }
-            return null;
-        }
-
-        public Task<UserDTO?> GetByIdWithLink(Guid idStudent)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<UserDTO?> GetByIdWithMajor(Guid idUser)
-        {
-            //throw new NotImplementedException();
-            try
-            {
-                var user = await _context.Users
-                    .Where(s => s.Id == idUser)
-                    .Include(s => s.Url)
-                    .Select(s => new UserDTO
-                    {
-                        Id = s.Id,
-                        Address = s.Address,
-                        //AvatarPath = s.Avatar,
-                        DateOfBirth = s.DateOfBirth,
-                        Email = s.Email,
-                        FullName = s.FullName,
-                        Phone = s.Phone,
-                        //Gender = s.Gender,
-                        //Hobby = s.Hobby,
-                        UrlId = s.UrlId,
-                        Url = s.Url.YourLink,
-                        //StudentClassId = s.StudentClassId,
-                    })
-                    .SingleOrDefaultAsync();
-                return user;
-            }
-            catch (Exception ex)
-            {
-            }
-            return null;
         }
 
         public async Task<bool> Update(UserDTO studentDTO)
         {
-            //throw new NotImplementedException();
-            var isOK = false;
             try
             {
                 var user = await _context.Users.FindAsync(studentDTO.Id);
@@ -219,24 +91,152 @@ namespace LinkMaker.Services.Implementations
                     user.Phone = studentDTO.Phone?.Trim();
                     user.Email = studentDTO.Email?.Trim();
                     user.DateOfBirth = studentDTO.DateOfBirth;
-                    //user.Gender = studentDTO.Gender;
-                    //user.Hobby = studentDTO.Hobby;
                     user.UrlId = studentDTO.UrlId;
-                    //user.StudentClassId = studentDTO.StudentClassId;
 
-                    //_context.Update(user);
                     await _context.SaveChangesAsync();
-                    isOK = true;
-                }
-            }
-            catch (Exception ex)
-            {
 
+                    // Clear specific user and the list
+                    await ClearUserCacheAsync(studentDTO.Id);
+                    return true;
+                }
+                return false;
             }
-            return isOK;
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
+        public async Task<bool> Delete(Guid idUser)
+        {
+            try
+            {
+                var user = await _context.Users.FindAsync(idUser);
+                if (user != null)
+                {
+                    _context.Users.Remove(user);
+                    await _context.SaveChangesAsync();
 
+                    // Clear specific user and the list
+                    await ClearUserCacheAsync(idUser);
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
 
+        public async Task<UserDTO[]?> GetAll()
+        {
+            try
+            {
+                var cachedData = await _cache.GetStringAsync(AllUsersCacheKey);
+                if (!string.IsNullOrEmpty(cachedData))
+                {
+                    return JsonSerializer.Deserialize<UserDTO[]>(cachedData);
+                }
+
+                var users = await _context.Users
+                    .Include(s => s.Url)
+                    .Select(s => new UserDTO
+                    {
+                        Id = s.Id,
+                        Address = s.Address,
+                        DateOfBirth = s.DateOfBirth,
+                        Email = s.Email,
+                        FullName = s.FullName,
+                        Phone = s.Phone,
+                        UrlId = s.UrlId,
+                        Url = s.Url.YourLink,
+                    })
+                    .ToArrayAsync();
+
+                if (users != null)
+                {
+                    await SetCacheAsync(AllUsersCacheKey, users);
+                }
+
+                return users;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public async Task<UserDTO?> GetById(Guid idUser)
+        {
+            try
+            {
+                var cacheKey = $"User_{idUser}";
+                var cachedData = await _cache.GetStringAsync(cacheKey);
+
+                if (!string.IsNullOrEmpty(cachedData))
+                {
+                    return JsonSerializer.Deserialize<UserDTO>(cachedData);
+                }
+
+                var user = await _context.Users
+                    .Where(s => s.Id == idUser)
+                    .Select(s => new UserDTO
+                    {
+                        Id = s.Id,
+                        Address = s.Address,
+                        DateOfBirth = s.DateOfBirth,
+                        Email = s.Email,
+                        FullName = s.FullName,
+                        Phone = s.Phone,
+                        UrlId = s.UrlId,
+                    })
+                    .SingleOrDefaultAsync();
+
+                if (user != null)
+                {
+                    await SetCacheAsync(cacheKey, user);
+                }
+
+                return user;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public async Task<UserDTO?> GetByIdWithMajor(Guid idUser)
+        {
+            // Caching this specifically depends on how often 'Major' details change.
+            // For now, simple DB fetch:
+            try
+            {
+                return await _context.Users
+                    .Where(s => s.Id == idUser)
+                    .Include(s => s.Url)
+                    .Select(s => new UserDTO
+                    {
+                        Id = s.Id,
+                        Address = s.Address,
+                        DateOfBirth = s.DateOfBirth,
+                        Email = s.Email,
+                        FullName = s.FullName,
+                        Phone = s.Phone,
+                        UrlId = s.UrlId,
+                        Url = s.Url.YourLink,
+                    })
+                    .SingleOrDefaultAsync();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public Task<UserDTO?> GetByIdWithLink(Guid idStudent)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
