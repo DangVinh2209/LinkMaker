@@ -44,7 +44,37 @@ namespace LinkMaker.Controllers
             return View(url);
         }
 
-        // GET: HomeController1/Create
+        //Vinh added 19/3 1:47AM
+        [HttpPost]
+        public IActionResult GenerateShortLink(string longUrl)
+        {
+            if (string.IsNullOrEmpty(longUrl))
+                return BadRequest("Invalid URL");
+
+            var shortCode = GenerateShortCode();
+
+            var uri = new Uri(longUrl);
+
+            var baseUrl = uri.GetLeftPart(UriPartial.Authority);
+
+            var shortLink = $"{baseUrl}/{shortCode}";
+
+            return Json(new { shortLink = shortLink });
+        }
+        private string GenerateShortCode(int length = 6)
+        {
+            const string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            var random = new Random();
+
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
+
+
+
+
+        // GET: Url/Create
         public ActionResult Create()
         {
             return View();

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Services\\LinkMaker.Services.csproj": {}
+    "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Services\\LinkMaker.Services.csproj": {}
   },
   "projects": {
-    "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj": {
+    "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj",
+        "projectUniqueName": "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj",
         "projectName": "LinkMaker.Common",
-        "projectPath": "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Common\\obj\\",
+        "projectPath": "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj",
+        "packagesPath": "C:\\Users\\QuangVinh-PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\QuangVinh-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -343,20 +343,20 @@
         }
       }
     },
-    "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj": {
+    "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj",
+        "projectUniqueName": "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj",
         "projectName": "LinkMaker.Data",
-        "projectPath": "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Data\\obj\\",
+        "projectPath": "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj",
+        "packagesPath": "C:\\Users\\QuangVinh-PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\QuangVinh-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -371,8 +371,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj": {
-                "projectPath": "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj"
+              "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj": {
+                "projectPath": "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj"
               }
             }
           }
@@ -422,7 +422,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -700,20 +700,20 @@
         }
       }
     },
-    "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Services\\LinkMaker.Services.csproj": {
+    "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Services\\LinkMaker.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Services\\LinkMaker.Services.csproj",
+        "projectUniqueName": "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Services\\LinkMaker.Services.csproj",
         "projectName": "LinkMaker.Services",
-        "projectPath": "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Services\\LinkMaker.Services.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Services\\obj\\",
+        "projectPath": "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Services\\LinkMaker.Services.csproj",
+        "packagesPath": "C:\\Users\\QuangVinh-PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\QuangVinh-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -728,11 +728,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj": {
-                "projectPath": "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj"
+              "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj": {
+                "projectPath": "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Common\\LinkMaker.Common.csproj"
               },
-              "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj": {
-                "projectPath": "E:\\visual studioi\\Linkmakercw\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj"
+              "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj": {
+                "projectPath": "C:\\Users\\QuangVinh-PC\\Documents\\GitHub\\LinkMaker\\LinkMaker.Data\\LinkMaker.Data.csproj"
               }
             }
           }
@@ -768,7 +768,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

@@ -16,3 +16,21 @@ E:\visual studioi\Linkmakercw\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\Lin
 E:\visual studioi\Linkmakercw\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\refint\LinkMaker.Services.dll
 E:\visual studioi\Linkmakercw\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\LinkMaker.Services.pdb
 E:\visual studioi\Linkmakercw\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\ref\LinkMaker.Services.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\bin\Debug\net10.0\LinkMaker.Services.deps.json
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\bin\Debug\net10.0\LinkMaker.Services.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\bin\Debug\net10.0\LinkMaker.Services.pdb
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\bin\Debug\net10.0\LinkMaker.Common.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\bin\Debug\net10.0\LinkMaker.Data.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\bin\Debug\net10.0\LinkMaker.Common.pdb
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\bin\Debug\net10.0\LinkMaker.Data.pdb
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\LinkMaker.Services.csproj.AssemblyReference.cache
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\LinkMaker.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\LinkMaker.Services.AssemblyInfoInputs.cache
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\LinkMaker.Services.AssemblyInfo.cs
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\LinkMaker.Services.csproj.CoreCompileInputs.cache
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\LinkMaker.Services.sourcelink.json
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\LinkMake.4C17980E.Up2Date
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\LinkMaker.Services.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\refint\LinkMaker.Services.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\LinkMaker.Services.pdb
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Services\obj\Debug\net10.0\ref\LinkMaker.Services.dll

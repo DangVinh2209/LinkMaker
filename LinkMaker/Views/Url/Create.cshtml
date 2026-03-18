@@ -7,7 +7,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+@* <h1>Create</h1>
 
 <h4>Link</h4>
 <hr />
@@ -38,4 +38,84 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} *@
+
+
+
+
+
+
+
+
+@* Vinh added 19/3 1:55AM *@
+
+
+<h1>Create</h1>
+
+<h4>Link</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- Long URL -->
+            <div class="form-group">
+                <label asp-for="YourLink" class="control-label"></label>
+                <input asp-for="YourLink" class="form-control" id="longUrl" />
+                <span asp-validation-for="YourLink" class="text-danger"></span>
+            </div>
+
+            <!-- Generate button -->
+            <div class="form-group mt-2 mb-2">
+                <button type="button" class="btn btn-secondary" onclick="generateShortLink()">
+                    Generate
+                </button>
+            </div>
+
+            <!-- Short URL -->
+            <div class="form-group">
+                <label asp-for="NewLink" class="control-label"></label>
+                <input asp-for="NewLink" class="form-control" id="shortUrl" />
+                <span asp-validation-for="NewLink" class="text-danger"></span>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group mt-3">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        function generateShortLink() {
+            const longUrl = document.getElementById("longUrl").value;
+
+            if (!longUrl) {
+                alert("Please enter a URL first");
+                return;
+            }
+
+             fetch('/Url/GenerateShortLink', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `longUrl=${encodeURIComponent(longUrl)}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("shortUrl").value = data.shortLink;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
 }

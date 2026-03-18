@@ -10,3 +10,15 @@ E:\visual studioi\Linkmakercw\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\LinkM
 E:\visual studioi\Linkmakercw\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\refint\LinkMaker.Common.dll
 E:\visual studioi\Linkmakercw\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.pdb
 E:\visual studioi\Linkmakercw\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\ref\LinkMaker.Common.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Common\bin\Debug\net10.0\LinkMaker.Common.deps.json
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Common\bin\Debug\net10.0\LinkMaker.Common.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Common\bin\Debug\net10.0\LinkMaker.Common.pdb
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.AssemblyInfoInputs.cache
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.AssemblyInfo.cs
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.csproj.CoreCompileInputs.cache
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.sourcelink.json
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\refint\LinkMaker.Common.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\LinkMaker.Common.pdb
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Common\obj\Debug\net10.0\ref\LinkMaker.Common.dll

@@ -14,3 +14,19 @@ E:\visual studioi\Linkmakercw\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMak
 E:\visual studioi\Linkmakercw\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\refint\LinkMaker.Data.dll
 E:\visual studioi\Linkmakercw\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.pdb
 E:\visual studioi\Linkmakercw\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\ref\LinkMaker.Data.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Data.deps.json
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Data.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Data.pdb
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Common.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\bin\Debug\net10.0\LinkMaker.Common.pdb
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.csproj.AssemblyReference.cache
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.AssemblyInfoInputs.cache
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.AssemblyInfo.cs
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.csproj.CoreCompileInputs.cache
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.sourcelink.json
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMake.CF299A74.Up2Date
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\refint\LinkMaker.Data.dll
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\LinkMaker.Data.pdb
+C:\Users\QuangVinh-PC\Documents\GitHub\LinkMaker\LinkMaker.Data\obj\Debug\net10.0\ref\LinkMaker.Data.dll
