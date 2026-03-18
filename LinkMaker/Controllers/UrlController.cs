@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Security.Claims;
 
 namespace LinkMaker.Controllers
 {
@@ -54,18 +55,41 @@ namespace LinkMaker.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,YourLink,NewLink")] UrlDTO urlDTO)
         {
-            // 1. Grab the ID of the currently logged-in user
+            // 1. Get the logged-in Identity User's ID
             var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            if (userIdString != null)
+            if (userIdString == null)
             {
-                // 2. Attach the User ID to the link so the database knows who owns it
-                urlDTO.UserId = Guid.Parse(userIdString);
+                return Unauthorized(); // Backup check just in case they aren't logged in
             }
 
+            var identityId = Guid.Parse(userIdString);
+
+            // 2. CHECK: Does this user exist in our business 'Users' table yet?
+            var userExists = await _context.Users.AnyAsync(u => u.Id == identityId);
+
+            // 3. CREATE ON THE FLY: If they don't exist, create their profile using Identity data
+            if (!userExists)
+            {
+                var userEmail = User.FindFirstValue(ClaimTypes.Email) ?? User.Identity?.Name ?? "Unknown";
+
+                var newBusinessProfile = new User
+                {
+                    Id = identityId, // VERY IMPORTANT: Use the exact same ID as Identity
+                    Email = userEmail,
+                    FullName = userEmail, // Defaulting to email since FullName is required
+                    DateOfBirth = DateTime.UtcNow // Defaulting to today since DOB is required
+                };
+
+                _context.Users.Add(newBusinessProfile);
+                await _context.SaveChangesAsync(); // Save the new user to the database
+            }
+
+            // 4. Attach the ID to the DTO and send it to the Service
             if (ModelState.IsValid)
             {
-                // 3. Now when the service tries to create it, the database is happy!
+                urlDTO.UserId = identityId;
+
                 var isOK = await _serviceUrl.Create(urlDTO);
                 if (isOK)
                 {
@@ -73,7 +97,6 @@ namespace LinkMaker.Controllers
                 }
             }
 
-            // If we get here, something failed. Return the view with the data they entered.
             return View(urlDTO);
         }
         public async Task<IActionResult> Edit(Guid id)
