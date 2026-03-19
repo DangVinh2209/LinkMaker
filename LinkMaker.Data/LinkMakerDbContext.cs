@@ -41,8 +41,8 @@ namespace LinkMaker.Data
                       .IsRequired()
                       .HasMaxLength(MaxLengths.TITLE);
 
-                entity.Property(e => e.UrlCode)
-                      .HasMaxLength(15);
+                //entity.Property(e => e.UrlCode)
+                //      .HasMaxLength(15);
             });
 
             // If you still have the old mapping code under modelBuilder.Entity<User>(), 

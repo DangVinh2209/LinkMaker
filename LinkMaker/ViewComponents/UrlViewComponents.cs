@@ -24,7 +24,7 @@ namespace LinkMaker.MVC.ViewComponents
                     Id = m.Id,
                     YourLink = m.YourLink,
                     NewLink = m.NewLink,
-                   UrlCode = m.UrlCode,
+                   //UrlCode = m.UrlCode,
                 })
                 .ToListAsync();
             return View(urls); // Trả về View Default.cshtml

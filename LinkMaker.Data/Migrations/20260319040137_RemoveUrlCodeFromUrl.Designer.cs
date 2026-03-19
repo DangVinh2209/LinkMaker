@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LinkMaker.Data.Migrations
 {
     [DbContext(typeof(LinkMakerDbContext))]
-    [Migration("20260318084746_firstcreate")]
-    partial class firstcreate
+    [Migration("20260319040137_RemoveUrlCodeFromUrl")]
+    partial class RemoveUrlCodeFromUrl
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
