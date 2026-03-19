@@ -37,7 +37,7 @@
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">View</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
@@ -46,8 +46,7 @@
         else
         {
             <tr>
-                @* <td colspan="3" class="text-center">No data found.</td> *@
-                <td colspan="3" class="text-center">You have not created any links yet.</td>
+                <td colspan="3" class="text-center">No data found.</td>
             </tr>
         }
     </tbody>

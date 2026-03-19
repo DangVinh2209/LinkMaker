@@ -32,6 +32,10 @@ namespace LinkMaker.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UrlCode")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 

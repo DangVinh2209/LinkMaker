@@ -98,16 +98,6 @@ namespace LinkMaker.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
-
-            [Required]
-            [Display(Name = "Full Name")]
-            public string FullName { get; set; }
-
-            [Required]
-            [Phone]
-            [Display(Name = "Phone Number")]
-            public string Phone { get; set; }
-            // mới thêm 2 cái file này 
         }
 
 
@@ -124,9 +114,6 @@ namespace LinkMaker.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
-                // gán thêm dữ liệu custom
-                user.FullName = Input.FullName;
-                user.PhoneNumber = Input.Phone;
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);

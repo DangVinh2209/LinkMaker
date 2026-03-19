@@ -29,7 +29,7 @@ namespace LinkMaker.Services.Implementations
                 {
                     YourLink = dtoUrl.YourLink.Trim(),
                     //Description = dtoUrl.Description?.Trim(),
-                    //UrlCode = dtoUrl.UrlCode?.Trim(),
+                    UrlCode = dtoUrl.UrlCode?.Trim(),
                     UserId = dtoUrl.UserId,
                     NewLink = dtoUrl.NewLink?.Trim() ?? string.Empty
                 };
@@ -76,7 +76,7 @@ namespace LinkMaker.Services.Implementations
                             Id = x.Id,
                             YourLink = x.YourLink,
                             NewLink = x.NewLink,
-                            //UrlCode = x.UrlCode,
+                            UrlCode = x.UrlCode,
                             UserId = x.UserId,
                         })
                         .ToArrayAsync();
@@ -101,7 +101,7 @@ namespace LinkMaker.Services.Implementations
                     Id = m.Id,
                     YourLink = m.YourLink,
                     NewLink = m.NewLink,
-                    //UrlCode = m.UrlCode,
+                    UrlCode = m.UrlCode,
                     UserId = m.UserId,
                 })
                 .SingleOrDefaultAsync();
@@ -127,7 +127,7 @@ namespace LinkMaker.Services.Implementations
                 {
                     url.YourLink = urlDTO.YourLink.Trim();
                     url.NewLink = urlDTO.NewLink?.Trim();
-                    //url.UrlCode = urlDTO.UrlCode?.Trim();
+                    url.UrlCode = urlDTO.UrlCode?.Trim();
                 }
                 await _context.SaveChangesAsync();
                 isOK = true;
@@ -137,51 +137,6 @@ namespace LinkMaker.Services.Implementations
             }
             return isOK;
 
-        }
-        public async Task<UrlDTO[]?> GetByUserId(Guid userId)
-        {
-            try
-            {
-                var urls = await _context.Urls
-                    .Where(x => x.UserId == userId)
-                    .Select(x => new UrlDTO
-                    {
-                        Id = x.Id,
-                        YourLink = x.YourLink,
-                        NewLink = x.NewLink,
-                        //UrlCode = x.UrlCode,
-                        UserId = x.UserId
-                    })
-                    .ToArrayAsync();
-
-                return urls ?? Array.Empty<UrlDTO>();
-            }
-            catch
-            {
-                return Array.Empty<UrlDTO>();
-            }
-        }
-
-        public async Task<UrlDTO?> GetById(Guid idUrl, Guid userId)
-        {
-            try
-            {
-                return await _context.Urls
-                    .Where(x => x.Id == idUrl && x.UserId == userId)
-                    .Select(x => new UrlDTO
-                    {
-                        Id = x.Id,
-                        YourLink = x.YourLink,
-                        NewLink = x.NewLink,
-                        //UrlCode = x.UrlCode,
-                        UserId = x.UserId
-                    })
-                    .SingleOrDefaultAsync();
-            }
-            catch
-            {
-                return null;
-            }
         }
     }
 }

@@ -25,59 +25,24 @@ namespace LinkMaker.Controllers
         // GET: UrlController/Index
         public async Task<ActionResult> Index()
         {
-            //var urlVMs = await _serviceUrl.GetAll(); // lát sửa chỗ này
-            //return View(urlVMs);
-            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-            if (string.IsNullOrEmpty(userIdString))
-            {
-                return Unauthorized();
-            }
-
-            var identityId = Guid.Parse(userIdString);
-            var urlVMs = await _serviceUrl.GetByUserId(identityId);
-
-            return View(urlVMs ?? Array.Empty<UrlDTO>());
+            var urlVMs = await _serviceUrl.GetAll(); // lát sửa chỗ này
+            return View(urlVMs);
         }
-        // mới sửa lúc 10h37 _ 19/3/2026
+
         // GET: Url/Details/5
-        //public async Task<IActionResult> Details(Guid? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    var url = await _serviceUrl.GetById(id.Value);
-        //    if (url == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(url);
-        //}
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-
-            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (string.IsNullOrEmpty(userIdString))
-            {
-                return Unauthorized();
-            }
-
-            var identityId = Guid.Parse(userIdString);
-            var url = await _serviceUrl.GetById(id.Value, identityId);
-
+            var url = await _serviceUrl.GetById(id.Value);
             if (url == null)
             {
                 return NotFound();
             }
-
             return View(url);
         }
-        // mới sưa lúc 10h44 _ ngày 19-3-2026
 
         //Vinh added 19/3 1:47AM
         [HttpPost]
@@ -164,41 +129,24 @@ namespace LinkMaker.Controllers
 
             return View(urlDTO);
         }
-        // Get: Urls/Edit/5
         public async Task<IActionResult> Edit(Guid id)
         {
-            ////var major = await _context.Majors.FindAsync(id);
-            //var urlDTO = await _serviceUrl.GetById(id);
-            //if (urlDTO == null)
-            //{
-            //    return NotFound();
-            //}
-            ////return View(major);
-            //return View(nameof(Edit), urlDTO);
-            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (string.IsNullOrEmpty(userIdString))
-            {
-                return Unauthorized();
-            }
-
-            var identityId = Guid.Parse(userIdString);
-            var urlDTO = await _serviceUrl.GetById(id, identityId);
-
-            if (urlDTO == null)
+            //var major = await _context.Majors.FindAsync(id);
+            var majorDTO = await _serviceUrl.GetById(id);
+            if (majorDTO == null)
             {
                 return NotFound();
             }
-
-            return View(nameof(Create), urlDTO);
+            //return View(major);
+            return View(nameof(Create), majorDTO);
         }
-        // mới sửa lúc 10h46 _ ngày 19-3-2026
 
-        // POST: Urls/Edit/5
+        // POST: Majors/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,YourLink,NewLink")] UrlDTO urlDTO)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,YourLink,NewLink,MajorCode")] UrlDTO urlDTO)
         {
             if (id != urlDTO.Id)
             {
@@ -214,7 +162,7 @@ namespace LinkMaker.Controllers
                     var isOK = await _serviceUrl.Update(urlDTO);
                     if (isOK)
                     {
-                        return RedirectToAction(nameof(Index));
+                        return RedirectToAction(nameof(Create));
                     }
                 }
                 catch (DbUpdateConcurrencyException)
@@ -229,7 +177,7 @@ namespace LinkMaker.Controllers
                     }
                 }
             }
-            return View(nameof(Edit), urlDTO);
+            return View(nameof(Create), urlDTO);
         }
 
         // GET: HomeController1/Delete/5
@@ -242,41 +190,20 @@ namespace LinkMaker.Controllers
         [Authorize]
         public async Task<IActionResult> Delete(Guid? id)
         {
-            //if (id == null)
-            //{
-            //    return NotFound();
-            //}
-            //var url = await _serviceUrl.GetById(id.Value);
-
-            //if (url == null)
-            //{
-            //    return NotFound();
-            //}
-            //var urlVM = new UrlVM(url);
-
-            //return PartialView(url);
             if (id == null)
             {
                 return NotFound();
             }
-
-            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (string.IsNullOrEmpty(userIdString))
-            {
-                return Unauthorized();
-            }
-
-            var identityId = Guid.Parse(userIdString);
-            var url = await _serviceUrl.GetById(id.Value, identityId);
+            var url = await _serviceUrl.GetById(id.Value);
 
             if (url == null)
             {
                 return NotFound();
             }
+            var urlVM = new UrlVM(url);
 
             return PartialView(url);
         }
-        // mới sửa lúc 10h46 _ ngày 19-3-2026
 
         // POST: Majors/Delete/5
         [HttpPost, ActionName("Delete")]
