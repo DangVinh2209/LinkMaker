@@ -100,22 +100,22 @@ namespace LinkMaker.Controllers
             return View(userDto);
         }
 
-        // GET: UserController1/Edit/5
-        //public async Task<IActionResult> Edit(Guid? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
+        //GET: UserController1/Edit/5
+        public async Task<IActionResult> Edit(Guid? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-        //    var user = await _context.Users.FindAsync(id);
-        //    if (user == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    ViewData["UrlId"] = new SelectList(_context.Urls, "Id", "NewLink", user.UrlId);
-        //    return View(user);
-        //}
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            //ViewData["UrlId"] = new SelectList(_context.Urls, "Id", "NewLink", user.UrlId);
+            return View(user);
+        }
 
         // POST: UserController1/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.

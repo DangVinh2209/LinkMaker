@@ -13,6 +13,8 @@ namespace LinkMaker.Data.Interfaces
         Task<UrlDTO?> GetById(Guid idUrl);
         Task<bool> Update(UrlDTO dtoUrl);
         Task<bool> Delete(Guid idUrl);
+        Task<UrlDTO[]?> GetByUserId(Guid userId);
+        Task<UrlDTO?> GetById(Guid idUrl, Guid userId);
 
     }
 }

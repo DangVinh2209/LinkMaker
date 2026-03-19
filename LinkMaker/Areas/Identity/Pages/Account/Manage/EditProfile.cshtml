@@ -1,0 +1,86 @@
+﻿@page
+@model LinkMaker.Areas.Identity.Pages.Account.Manage.EditProfileModel
+@{
+    ViewData["Title"] = "Edit Profile";
+}
+
+<div class="container py-4">
+    <div class="profile-card">
+        <h1 class="profile-title mb-4">Edit Profile</h1>
+
+        @if (!string.IsNullOrEmpty(Model.StatusMessage))
+        {
+            <div class="alert alert-success mb-3">
+                @Model.StatusMessage
+            </div>
+        }
+
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.FullName" class="form-control" placeholder="Full Name" />
+                <label asp-for="Input.FullName"></label>
+                <span asp-validation-for="Input.FullName" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Phone Number" />
+                <label asp-for="Input.PhoneNumber"></label>
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Email" class="form-control" placeholder="Email" />
+                <label asp-for="Input.Email"></label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+
+            @* <div class="form-floating mb-3">
+                <input asp-for="Input.Avatar" class="form-control" placeholder="Avatar URL" />
+                <label asp-for="Input.Avatar"></label>
+                <span asp-validation-for="Input.Avatar" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <textarea asp-for="Input.Description" class="form-control" placeholder="Description" style="height:120px"></textarea>
+                <label asp-for="Input.Description"></label>
+                <span asp-validation-for="Input.Description" class="text-danger"></span>
+            </div> *@
+
+            <hr class="my-4" />
+            <h4 class="mb-3">Change Password</h4>
+
+            @* <div class="form-floating mb-3">
+                <input asp-for="Input.CurrentPassword" class="form-control" placeholder="Current Password" />
+                <label asp-for="Input.CurrentPassword"></label>
+                <span asp-validation-for="Input.CurrentPassword" class="text-danger"></span>
+            </div> *@
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" value="********" disabled />
+                <label>Current Password</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.NewPassword" class="form-control" placeholder="New Password"  />
+                <label asp-for="Input.NewPassword"></label>
+                <span asp-validation-for="Input.NewPassword" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.ConfirmNewPassword" class="form-control" placeholder="Confirm New Password" />
+                <label asp-for="Input.ConfirmNewPassword"></label>
+                <span asp-validation-for="Input.ConfirmNewPassword" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn hero-btn hero-btn-primary">Save Changes</button>
+                <a asp-page="/Account/Manage/Index" class="btn hero-btn hero-btn-outline">Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
