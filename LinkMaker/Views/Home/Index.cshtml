@@ -2,7 +2,23 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-box">
+            <h1 class="hero-title">
+                Welcome to <span>LinkMaker</span>
+            </h1>
+            <div class="hero-actions">
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <a asp-controller="Url" asp-action="Create" class="btn hero-btn hero-btn-primary">
+                        Create Short Link
+                    </a>
+                    <a asp-controller="Url" asp-action="Index" class="btn hero-btn hero-btn-outline">
+                        View Links
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</section>

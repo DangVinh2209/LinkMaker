@@ -13,7 +13,7 @@ namespace LinkMaker.MVC.Models
             Id = dto.Id;
             YourLink = dto.YourLink;
             NewLink = dto.NewLink;
-            UrlCode = dto.UrlCode;
+            //UrlCode = dto.UrlCode;
         }
 
         public Guid Id { get; set; }
@@ -22,6 +22,6 @@ namespace LinkMaker.MVC.Models
 
         public string NewLink { get; set; } = string.Empty;
 
-        public string? UrlCode { get; set; }
+        //public string? UrlCode { get; set; }
     }
 }

@@ -35,7 +35,7 @@ namespace LinkMaker.Data.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     YourLink = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     NewLink = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UrlCode = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: true),
+                    //UrlCode = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: true),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>

@@ -1,0 +1,57 @@
+﻿@page
+@model LinkMaker.Areas.Identity.Pages.Account.Manage.ProfileModel
+@{
+    ViewData["Title"] = "My Profile";
+    ViewData["ActivePage"] = "Profile";
+}
+
+<div class="container py-4">
+    <div class="profile-card">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                @if (!string.IsNullOrEmpty(Model.CurrentUser?.Avatar))
+                {
+                    <img src="@Model.CurrentUser.Avatar" alt="Avatar" />
+                }
+                else
+                {
+                    <span>
+                        @(string.IsNullOrEmpty(Model.CurrentUser?.FullName)
+                                            ? "U"
+                                            : Model.CurrentUser.FullName.Substring(0, 1).ToUpper())
+                    </span>
+                }
+            </div>
+
+            <div>
+                <h1 class="profile-title">@Model.CurrentUser?.FullName</h1>
+                <p class="profile-subtitle">@Model.CurrentUser?.Email</p>
+            </div>
+        </div>
+
+        <hr />
+
+        <dl class="row profile-info">
+            <dt class="col-sm-3">Full Name</dt>
+            <dd class="col-sm-9">@Model.CurrentUser?.FullName</dd>
+
+            <dt class="col-sm-3">Email</dt>
+            <dd class="col-sm-9">@Model.CurrentUser?.Email</dd>
+
+            <dt class="col-sm-3">Phone Number</dt>
+            <dd class="col-sm-9">
+                @(string.IsNullOrWhiteSpace(Model.CurrentUser?.PhoneNumber) ? "Not updated" : Model.CurrentUser.PhoneNumber)
+            </dd>
+
+            <dt class="col-sm-3">Description</dt>
+            <dd class="col-sm-9">
+        </dl>
+        <div class="mt-4 d-flex gap-2">
+            <a asp-controller="Home" asp-action="Index" class="btn hero-btn hero-btn-outline">Back Home</a>
+            <a asp-area="Identity" asp-page="/Account/Manage/EditProfile" class="btn hero-btn hero-btn-outline">
+                Modification
+            </a>
+
+        </div>
+    </div>
+</div>
