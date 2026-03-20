@@ -80,6 +80,11 @@
                 <span asp-validation-for="NewLink" class="text-danger"></span>
             </div>
 
+            <div id="qrPreview" class="mt-3" style="display:none;">
+                <p>QR Preview:</p>
+                <img id="qrImage" src="" style="width:150px;" />
+            </div>
+
             <!-- Submit -->
             <div class="form-group mt-3">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -112,9 +117,25 @@
             body: `longUrl=${encodeURIComponent(longUrl)}`
             })
             .then(response => response.json())
-            .then(data => {
-                document.getElementById("shortUrl").value = data.shortLink;
-            })
+        //     .then(data => {
+        //         document.getElementById("shortUrl").value = data.shortLink;
+        //         const qrImg = document.getElementById("qrImage");
+        // qrImg.src = `/Qr/Generate?text=${encodeURIComponent(data.shortLink)}`;
+        // document.getElementById("qrPreview").style.display = "block";
+        //     })
+                .then(data => {
+            document.getElementById("shortUrl").value = data.shortLink;
+
+            const qrImg = document.getElementById("qrImage");
+            const qrContainer = document.getElementById("qrPreview");
+
+            // 1. Point to QRCode controller
+            // 2. Point to GetQRCode action
+            // 3. Pass the short link as 'text'
+            qrImg.src = "/QRCode/GetQRCode?text=" + encodeURIComponent(data.shortLink);
+    
+            qrContainer.style.display = "block";
+        })
             .catch(error => console.error('Error:', error));
         }
     </script>

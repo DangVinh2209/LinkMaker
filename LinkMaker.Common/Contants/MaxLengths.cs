@@ -1,4 +1,4 @@
-﻿namespace StudentManager.Common.Contants
+﻿namespace LinkMaker.Common.Contants
 {
     public static class MaxLengths
     {
@@ -9,5 +9,6 @@
         public const int EMAIL = 250;
         public const int ADDRESS = 500;
         public const int AVATAR = 500;
+        public const int URL = 500;
     }
 }

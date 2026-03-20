@@ -38,6 +38,28 @@ namespace LinkMaker.MVC.Controllers
         {
             return View();
         }
+
+        // Add this inside QRCodeController.cs
+        [HttpGet]
+        public IActionResult GetQRCode(string text)
+        {
+            if (string.IsNullOrEmpty(text)) return BadRequest();
+
+            using (QRCodeGenerator qrGenerator = new QRCodeGenerator())
+            {
+                QRCodeData qrCodeData = qrGenerator.CreateQrCode(text, QRCodeGenerator.ECCLevel.Q);
+                using (PngByteQRCode qrCode = new PngByteQRCode(qrCodeData))
+                {
+                    byte[] qrCodeImage = qrCode.GetGraphic(20);
+                    return File(qrCodeImage, "image/png");
+                }
+            }
+        }
+
+
+
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(QRCodeVM model)

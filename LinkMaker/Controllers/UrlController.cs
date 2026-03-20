@@ -324,3 +324,133 @@ namespace LinkMaker.Controllers
         }
     }
 }
+//using LinkMaker.Common.DTOS;
+//using LinkMaker.Data;
+//using LinkMaker.Data.Interfaces;
+//using Microsoft.AspNetCore.Authorization;
+//using Microsoft.AspNetCore.Mvc;
+//using Microsoft.EntityFrameworkCore;
+//using System.Security.Claims;
+//using QRCoder;
+//using System.Drawing;
+//using System.Drawing.Imaging;
+
+//// Resolve the conflict by aliasing your Entity
+//using QRCodeEntity = LinkMaker.Data.Entities.QRCode;
+//using UserEntity = LinkMaker.Data.Entities.User;
+
+//namespace LinkMaker.Controllers
+//{
+//    [Authorize]
+//    public class UrlController : Controller
+//    {
+//        private readonly LinkMakerDbContext _context;
+//        private readonly IUrlService _serviceUrl;
+//        private readonly IWebHostEnvironment _env;
+
+//        public UrlController(IUrlService serviceUrl, LinkMakerDbContext context, IWebHostEnvironment env)
+//        {
+//            _context = context;
+//            _serviceUrl = serviceUrl;
+//            _env = env;
+//        }
+
+//        public async Task<ActionResult> Index()
+//        {
+//            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+//            if (string.IsNullOrEmpty(userIdString)) return Unauthorized();
+
+//            var identityId = Guid.Parse(userIdString);
+//            var urlVMs = await _serviceUrl.GetByUserId(identityId);
+//            return View(urlVMs ?? Array.Empty<UrlDTO>());
+//        }
+
+//        [HttpPost]
+//        public IActionResult GenerateShortLink(string longUrl)
+//        {
+//            if (string.IsNullOrEmpty(longUrl)) return BadRequest("Invalid URL");
+
+//            var shortCode = GenerateShortCode();
+//            var uri = new Uri(longUrl);
+//            var baseUrl = uri.GetLeftPart(UriPartial.Authority);
+//            var shortLink = $"{baseUrl}/{shortCode}";
+
+//            string fileName = $"{Guid.NewGuid()}.png";
+//            string folderPath = Path.Combine(_env.WebRootPath, "qrcodes");
+
+//            if (!Directory.Exists(folderPath)) Directory.CreateDirectory(folderPath);
+
+//            string filePath = Path.Combine(folderPath, fileName);
+
+//            using (QRCodeGenerator qrGenerator = new QRCodeGenerator())
+//            using (QRCodeData qrCodeData = qrGenerator.CreateQrCode(longUrl, QRCodeGenerator.ECCLevel.Q))
+//            // Explicitly use QRCoder.QRCode here to avoid ambiguity
+//            using (QRCoder.QRCode qrCode = new QRCoder.QRCode(qrCodeData))
+//            using (Bitmap qrBitmap = qrCode.GetGraphic(20))
+//            {
+//                qrBitmap.Save(filePath, ImageFormat.Png);
+//            }
+
+//            return Json(new
+//            {
+//                shortLink = shortLink,
+//                qrCodeUrl = "/qrcodes/" + fileName,
+//                qrFileName = fileName
+//            });
+//        }
+
+//        private string GenerateShortCode(int length = 6)
+//        {
+//            const string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+//            var random = new Random();
+//            return new string(Enumerable.Repeat(chars, length)
+//                .Select(s => s[random.Next(s.Length)]).ToArray());
+//        }
+
+//        public ActionResult Create() => View();
+
+//        [HttpPost]
+//        [ValidateAntiForgeryToken]
+//        public async Task<IActionResult> Create(UrlDTO urlDTO, string qrFileName)
+//        {
+//            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+//            if (userIdString == null) return Unauthorized();
+
+//            var identityId = Guid.Parse(userIdString);
+
+//            if (!await _context.Users.AnyAsync(u => u.Id == identityId))
+//            {
+//                var userEmail = User.FindFirstValue(ClaimTypes.Email) ?? "Unknown";
+//                _context.Users.Add(new UserEntity
+//                {
+//                    Id = identityId,
+//                    Email = userEmail,
+//                    FullName = userEmail,
+//                    DateOfBirth = DateTime.UtcNow
+//                });
+//                await _context.SaveChangesAsync();
+//            }
+
+//            if (ModelState.IsValid)
+//            {
+//                urlDTO.UserId = identityId;
+//                var isOK = await _serviceUrl.Create(urlDTO);
+
+//                if (isOK && !string.IsNullOrEmpty(qrFileName))
+//                {
+//                    // Use the alias 'QRCodeEntity' here
+//                    var qrEntry = new QRCodeEntity
+//                    {
+//                        Id = Guid.NewGuid(),
+//                        URL = urlDTO.YourLink,
+//                        FileName = qrFileName
+//                    };
+//                    _context.QRCodes.Add(qrEntry);
+//                    await _context.SaveChangesAsync();
+//                }
+//                return RedirectToAction(nameof(Index));
+//            }
+//            return View(urlDTO);
+//        }
+//    }
+//}

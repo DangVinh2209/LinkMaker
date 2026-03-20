@@ -1,6 +1,6 @@
 ﻿//using LinkMaker.Common.Contants;
 //using LinkMaker.Common.Enums;
-using StudentManager.Common.Contants;
+using LinkMaker.Common.Contants;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
