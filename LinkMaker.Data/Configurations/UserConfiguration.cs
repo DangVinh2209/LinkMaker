@@ -1,7 +1,7 @@
 ﻿using LinkMaker.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using StudentManager.Common.Contants;
+using LinkMaker.Common.Contants;
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -1,7 +1,7 @@
 ﻿using LinkMaker.Data.Entities.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using StudentManager.Common.Contants;
+using LinkMaker.Common.Contants;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,6 +16,7 @@ namespace LinkMaker.Data
         }
         public DbSet<LinkMakerUser> linkMakerUsers { get; set; }
         public DbSet<UserManagerRole> UserManagerRole { get; set; }
+        public object QRCodes { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

@@ -1,0 +1,29 @@
+﻿@using LinkMaker.MVC.ViewComponents
+@model LinkMaker.MVC.Models.QRCodeVM
+
+<form asp-antiforgery="true" method="post" asp-controller="QRCode" asp-action="Create">
+    <div class="row">
+        <div class="col-md-12">
+            <p>Tao QR Code tu duong dan URL</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="">
+                <label asp-for="URL"></label>
+                <input asp-for="URL" class="form-control" />
+                <span asp-validation-for="URL"></span>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="submit" class="btn btn-primary" value="Create" />
+        </div>
+    </div>
+</form>
+
+<div class="row">
+    @await Component.InvokeAsync(nameof(QRCodeList))
+</div>

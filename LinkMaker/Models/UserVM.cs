@@ -5,7 +5,7 @@ using LinkMaker.Common.DTOs;
 using LinkMaker.Data.Entities;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using StudentManager.Common.Contants;
+using LinkMaker.Common.Contants;
 
 namespace LinkMaker.MVC.Models
 {

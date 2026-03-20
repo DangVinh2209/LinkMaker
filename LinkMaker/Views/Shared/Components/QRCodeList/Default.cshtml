@@ -1,0 +1,11 @@
+﻿@model LinkMaker.MVC.Models.QRCodeVM[]
+
+@if (Model != null && Model.Length > 0)
+{
+    foreach (var qrCode in Model)
+    {
+        <div class="col-md-3">
+            <img src="@Url.Content(qrCode.FileName)" width="100%" />
+        </div>
+    }
+}
