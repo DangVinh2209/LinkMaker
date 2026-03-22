@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LinkMaker.Data.Migrations.LinkMakerIdentityDb
 {
     [DbContext(typeof(LinkMakerIdentityDbContext))]
-    [Migration("20260318174447_firstIdentity")]
-    partial class firstIdentity
+    [Migration("20260322081940_firstcreateidentity")]
+    partial class firstcreateidentity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

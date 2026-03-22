@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace LinkMaker.Data.Migrations.LinkMakerIdentityDb
 {
     /// <inheritdoc />
-    public partial class firstIdentity : Migration
+    public partial class firstcreateidentity : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

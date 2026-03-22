@@ -132,7 +132,8 @@
             // 1. Point to QRCode controller
             // 2. Point to GetQRCode action
             // 3. Pass the short link as 'text'
-            qrImg.src = "/QRCode/GetQRCode?text=" + encodeURIComponent(data.shortLink);
+            //qrImg.src = "/QRCode/GetQRCode?text=" + encodeURIComponent(data.shortLink);
+            qrImg.src = "/QRCode/GetQRCode?text=" + longUrl;
     
             qrContainer.style.display = "block";
         })

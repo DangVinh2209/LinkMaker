@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LinkMaker.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ee34bd5d667480b32c9f3b864b103e8ca0f68ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+053476cf6e81cbe36f9bfcc38db9c69d0c9e9dc3")]
 [assembly: System.Reflection.AssemblyProductAttribute("LinkMaker.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LinkMaker.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
